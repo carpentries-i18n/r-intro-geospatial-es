@@ -94,7 +94,7 @@ str(gapminder)
 ~~~
 {: .output}
 
-También podemos examinar las columnas individuales del dataframe con la función `class` :
+También podemos examinar las columnas individuales del dataframe con la función `class`:
 
 
 ~~~

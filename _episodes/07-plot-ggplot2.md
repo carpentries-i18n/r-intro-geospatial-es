@@ -58,7 +58,7 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-07-lifeExp-vs-gdpPercap-scatter-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter" alt="plot of chunk lifeExp-vs-gdpPercap-scatter" width="612" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/fig/rmd-07-lifeExp-vs-gdpPercap-scatter-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter" alt="plot of chunk lifeExp-vs-gdpPercap-scatter" style="display: block; margin: auto;" width="612"/>
 
 Por si misma, la llama a `ggplot` no es suficiente para graficar una figura:
 
@@ -68,7 +68,7 @@ ggplot(data = gapminder, aes(x = lifeExp))
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-07-blank-plot-1.png" title="plot of chunk blank-plot" alt="plot of chunk blank-plot" width="612" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/fig/rmd-07-blank-plot-1.png" title="plot of chunk blank-plot" alt="plot of chunk blank-plot" style="display: block; margin: auto;" width="612"/>
 
 Necesitamos decirle a  `ggplot` cómo queremos representar visualmente los datos, lo cual 
 hacemos al agregar capas de geom. En nuestro ejemplo, utilizamos `geom_histogram()`, la cual
@@ -88,7 +88,7 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 ~~~
 {: .output}
 
-<img src="../fig/rmd-07-lifeExp-vs-gdpPercap-scatter2-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter2" alt="plot of chunk lifeExp-vs-gdpPercap-scatter2" width="612" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/fig/rmd-07-lifeExp-vs-gdpPercap-scatter2-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter2" alt="plot of chunk lifeExp-vs-gdpPercap-scatter2" style="display: block; margin: auto;" width="612"/>
 
 > ## Challenge 1
 >
@@ -112,7 +112,7 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 > > ~~~
 > > {: .salida}
 > > 
-> > <img src="../fig/rmd-07-ch1-sol-1.png" title="plot of chunk ch1-sol" alt="plot of chunk ch1-sol" width="612" style="display: block; margin: auto;" />
+> > <img src="{{ site.baseurl }}/fig/rmd-07-ch1-sol-1.png" title="plot of chunk ch1-sol" alt="plot of chunk ch1-sol" style="display: block; margin: auto;" width="612"/>
 > {: .solution}
 {: .challenge}
 
@@ -138,7 +138,7 @@ ggplot(data = gapminder_small, aes(x = country, y = gdpPercap)) +
 geom_col()
 {: .language-r}
 
-<img src="../fig/rmd-07-hist-subset-gapminder-1.png" title="plot of chunk hist-subset-gapminder" alt="plot of chunk hist-subset-gapminder" width="612" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/fig/rmd-07-hist-subset-gapminder-1.png" title="plot of chunk hist-subset-gapminder" alt="plot of chunk hist-subset-gapminder" style="display: block; margin: auto;" width="612"/>
 
 Con muchas barras representadas, es imposible leer todas las etiquetas del eje x. Una solución rápida es añadir la función `coord_flip()` al final del código de nuestro gráfico
 
@@ -150,7 +150,7 @@ ggplot(data = gapminder_small, aes(x = country, y = gdpPercap)) +
 ~~~
 {: .language-r}
 
-<img src="../fig/rmd-07-hist-subset-gapminder-flipped-1.png" title="plot of chunk hist-subset-gapminder-flipped" alt="plot of chunk hist-subset-gapminder-flipped" width="612" style="display: block; margin: auto;" />
+<img src="{{ site.baseurl }}/fig/rmd-07-hist-subset-gapminder-flipped-1.png" title="plot of chunk hist-subset-gapminder-flipped" alt="plot of chunk hist-subset-gapminder-flipped" style="display: block; margin: auto;" width="612"/>
 
 Hay formas más sofisticadas de modificar el nombre de
 los ejes. Aprenderemos algunos de esos métodos
@@ -199,7 +199,7 @@ más adelante en este taller.
 > > ~~~
 > > {: .language-r}
 > > 
-> > <img src="../fig/rmd-07-gpd-per-cap-1.png" title="plot of chunk gpd-per-cap" alt="plot of chunk gpd-per-cap" width="612" style="display: block; margin: auto;" />
+> > <img src="{{ site.baseurl }}/fig/rmd-07-gpd-per-cap-1.png" title="plot of chunk gpd-per-cap" alt="plot of chunk gpd-per-cap" style="display: block; margin: auto;" width="612"/>
 > {: .solution}
 {: .challenge}
 

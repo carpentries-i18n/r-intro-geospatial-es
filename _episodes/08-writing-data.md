@@ -1,3 +1,4 @@
+---
 #Por favor no edites este archivo directamente; Se genera automáticamente.
 #En su lugar, por favor, edita 08-writing-data.md en _episodes_rmd/
 title: Escribiendo datos
@@ -71,7 +72,7 @@ Abre este documento y échale un vistazo.
 {: .challenge}
 
 
-Los comandos `jpeg`,` png` etc. se usan de manera similar para producir
+Los comandos `jpeg`, `png`, etc. se usan de manera similar para producir
 documentos en diferentes formatos.
 
 ## Escribiendo datos
@@ -89,7 +90,7 @@ sólo queremos centrarnos en los datos de gapminder para Australia:
 aust_subset <- filter(gapminder, country == "Australia")
 
 write.csv(aust_subset,
-file="cleaned-data/gapminder-aus.csv"
+  file="cleaned-data/gapminder-aus.csv"
 )
 ~~~
 {: .language-r}
@@ -115,9 +116,9 @@ Para cambiar este comportamiento, podemos hacer lo siguiente:
 
 ~~~
 write.csv(
-aust_subset,
-file="cleaned-data/gapminder-aus.csv",
-row.names=FALSE
+  aust_subset,
+  file="cleaned-data/gapminder-aus.csv",
+  row.names=FALSE
 )
 ~~~
 {: .language-r}
@@ -131,7 +132,7 @@ row.names=FALSE
 > >
 > > 
 > > ~~~
-> > gapminder_after_1990 1990)
+> > gapminder_after_1990 <- filter(gapminder, year > 1990)
 > > 
 > > write.csv(gapminder_after_1990,
 > >  file = "cleaned-data/gapminder-after-1990.csv",

@@ -16,7 +16,7 @@ Esta lección es una versión reducida de la lección SWC [R for Reproducible Sc
 
 ## Diseño de la lección
 
-#### [Introduccion a R y RStudio]({{ relative_root_path }}/{% link _episodes/01-rstudio-intro.md %})
+#### [Introducción a R y RStudio]({{ relative_root_path }}/{% link _episodes/01-rstudio-intro.md %})
 
 * Si el taller incluye lecciones de [Introduction to Geospatial Concepts](https://datacarpentry.org/organization-geospatial/), los estudiantes tendrán
 la introducción a RStudio en el contexto general del software geoespacial

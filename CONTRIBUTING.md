@@ -31,17 +31,17 @@ y conocer a algunos de los miembros de nuestra comunidad.
     Sin embargo,
     podremos responder más rápidamente si usas uno de los otros métodos descritos a continuación.
 
-2. Si tienes una cuenta de[GitHub][github],
-  o estás dispuesto a [crear una][github-join],
-  pero no sabes como usar Git,
-  puedes informar de problemas o sugerir mejoras al [crear un informe de error][issues] (**issue** en inglés).
-  Esto nos permite asignar la tarea a alguien
-  y seguirla en un hilo de discusión.
+2. Si tienes una cuenta de [GitHub][github],
+ o estás dispuesto a [crear una][github-join],
+ pero no sabes como usar Git,
+ puedes informar de problemas o sugerir mejoras al [crear un informe de error][issues] (**issue** en inglés).
+ Esto nos permite asignar la tarea a alguien
+ y seguirla en un hilo de discusión.
 
 3. Si te sientes cómodo con Git,
-  y te gustaría añadir o cambiar algo del material,
-  puedes enviar una solicitud de inclusión (PR por sus siglas en inglés, **pull request**).
-  Las instrucciones para hacerlo [se incluyen a continuación](#usando-github).
+ y te gustaría añadir o cambiar algo del material,
+ puedes enviar una solicitud de inclusión (PR por sus siglas en inglés, **pull request**).
+ Las instrucciones para hacerlo [se incluyen a continuación](#usando-github).
 
 ## Dónde contribuir
 

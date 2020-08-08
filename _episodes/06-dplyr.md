@@ -110,7 +110,7 @@ year_country_gdp <- select(gapminder, year, country, gdpPercap)
 ~~~
 {: .language-r}
 
-![](../fig/13-dplyr-fig1.png)
+![]({{ site.baseurl }}/fig/13-dplyr-fig1.png)
 
 Si nosotros abrimos `year_country_gdp` vamos a ver que solo contiene año, país y gdpPercap. Hasta ahora hemos usado una gramática `normal`, pero las fortaleza de `dplyr` recae en combinar varias funciones usando pipes. Como la gramática de las pipes es diferente a todo lo que hemos visto en R hasta ahora, vamos a repertir que hemos hecho arriba usando pipes.
 
@@ -224,7 +224,7 @@ Notarás que la estructura del marco de datos donde usamos `group_by()`
 `grouped_df` puede considerarse como una `lista` donde cada elemento de la `lista` es un
 `data.frame` que contiene solo las filas que corresponden a un valor particular de `continente` (al menos en el ejemplo anterior).
 
-![](../fig/13-dplyr-fig2.png)
+![]({{ site.baseurl }}/fig/13-dplyr-fig2.png)
 
 ## Usando `summarize()`
 
@@ -271,7 +271,7 @@ gdp_bycontinents
 ~~~
 {: .output}
 
-![](../fig/13-dplyr-fig3.png)
+![]({{ site.baseurl }}/fig/13-dplyr-fig3.png)
 
 Eso nos permite calcular la media de gdpPercap para cada continente, pero esto
 se pone mejor aún.

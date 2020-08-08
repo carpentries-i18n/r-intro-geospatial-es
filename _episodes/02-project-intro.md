@@ -32,7 +32,7 @@ lo usual.
 
 Algunas personas organizan sus proyectos así:
 
-![](../fig/bad_layout.png)
+![]({{ site.baseurl }}/fig/bad_layout.png)
 
 Hay muchas razones por las que *SIEMPRE* debemos evitar esto:
 
@@ -66,7 +66,6 @@ Usaremos esto hoy para crear un proyecto autocontenido, reproducible.
 > 3. Dale clic en "Proyecto vacío".
 > 4. Escribe "r-geoespacial" como el nombre del directorio.
 > 5. Dale clic en el botón "Crear proyecto".
- 
 {: .challenge}
 
 Una ventaja clave de un proyecto en RStudio es que cada vez que abrimos este proyecto en
@@ -126,16 +125,16 @@ De otra forma te encontrarás preguntándote si `file_A` realmente es sólo una 
 Para los conjuntos de datos que tu generes, vale la pena tomarse el tiempo para crear una convención de nombres que funcione para tu proyecto,
 y apegarse a eso. Los nombres de los archivos no tienen que ser largos, solo tienen que ser lo suficientemente largos para que puedas saber cuál es el archivo. 
 La fecha de generación, el tema y si un producto es intermedio o final son buenos datos para mantener
-en un nombre de archivo. Para obtener más consejos sobre cómo nombrar archivos, consulta [las diapositivas de la charla de Jenny Bryan "Naming things" del 2015 Reproducible Science Workshop] (https://speakerdeck.com/jennybc/how-to-name-files) en inglés.
+en un nombre de archivo. Para obtener más consejos sobre cómo nombrar archivos, consulta [las diapositivas de la charla de Jenny Bryan "Naming things" del 2015 Reproducible Science Workshop](https://speakerdeck.com/jennybc/how-to-name-files) en inglés.
 
 > ## Sugerencia: Buenas prácticas para la computación científica
 >
-> [Buenas prácticas para computación científica] (https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/good-enough-practices-for-scientific-computing. pdf) da las siguientes recomendaciones para la organización del proyecto:
+> [Buenas prácticas para computación científica](https://github.com/swcarpentry/good-enough-practices-in-scientific-computing/blob/gh-pages/good-enough-practices-for-scientific-computing. pdf) da las siguientes recomendaciones para la organización del proyecto:
 >
 > 1. Coloca cada proyecto en su propio directorio, que lleva el nombre del proyecto.
 > 2. Coloca los documentos de texto asociados con el proyecto en el directorio `doc`.
-> 3. Coloca los datos sin procesar y los metadatos en el directorio `datos`, y los archivos generados durante la limpieza y el análisis en un directorio` resultados`.
-> 4. Pon la fuente de los scripts y programas del proyecto en el directorio `src`, y los programas traídos de otro lugar o compilados localmente en el directorio` bin`.
+> 3. Coloca los datos sin procesar y los metadatos en el directorio `datos`, y los archivos generados durante la limpieza y el análisis en un directorio `resultados`.
+> 4. Pon la fuente de los scripts y programas del proyecto en el directorio `src`, y los programas traídos de otro lugar o compilados localmente en el directorio `bin`.
 > 5. Nombra todos los archivos para reflejar su contenido o función.
 {: .callout}
 
@@ -144,7 +143,7 @@ en un nombre de archivo. Para obtener más consejos sobre cómo nombrar archivos
 Ahora que tenemos una buena estructura para el proyecto, guardaremos nuestros archivos de datos en el directorio `datos/`.
 
 > ## Challenge 1
-> 1 \. Descarga cada uno de los archivos de datos enumerados a continuación (CTRL + S, haz clic con el botón derecho del mouse -> "Guardar como" o Archivo -> "Guardar página como")
+> 1 \. Descarga cada uno de los archivos de datos enumerados a continuación (<kbd>Ctrl</kbd>+<kbd>S</kbd>, haz clic con el botón derecho del ratón -> "Guardar como" o Archivo -> "Guardar página como")
 > 
 > - [datos de los países nórdicos](https://raw.githubusercontent.com/datacarpentry/r-intro-geospatial/master/_episodes_rmd/data/nordic-data.csv)
 > - [datos de países nórdicos (versión 2)](https://raw.githubusercontent.com/datacarpentry/r-intro-geospatial/master/_episodes_rmd/data/nordic-data-2.csv)

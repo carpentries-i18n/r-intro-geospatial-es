@@ -1,13 +1,14 @@
+---
 # Por favor, no edites este archivo directamente; se genera de forma automática.
 # En cambio, edita 01-rstudio-intro.md en _episodes_rmd/
-titulo: "Introducción a R y RStudio"
-lección: 20
-ejercicios: 5
-preguntas:
+title: "Introducción a R y RStudio"
+exercises: 20
+exercises: 5
+questions:
 - "¿Cómo encontrar lo que buscas en RStudio?"
 - "¿Cómo interactuar con R?"
 - "¿Cómo instalar paquetes?"
-objetivos:
+objetives:
 - "Describe el propósito y el uso de cada panel en el IDE RStudio"
 - "Localiza botones y opciones en el IDE RStudio"
 - "Define una variable"
@@ -15,12 +16,12 @@ objetivos:
 - "Usa operadores matemáticos y de comparación"
 - "Llama funciones"
 - "Administra paquetes"
-puntos clave:
+keypoints:
 - "Usa RStudio para escribir y ejecutar programas R".
 - "R tiene los operadores aritméticos habituales".
-- "Usa` <-` para asignar valores a las variables ".
-- "Usa` install.packages()` para instalar paquetes (librerías)".
-fuente: Rmd
+- "Usa `<-` para asignar valores a las variables".
+- "Usa `install.packages()` para instalar paquetes (bibliotecas)".
+source: Rmd
 ---
 
 
@@ -65,12 +66,12 @@ Cuando abres RStudio por primera vez, serás bienvenida por tres paneles:
 * Entorno/Historia (pestañas arriba a la derecha)
 * Archivos/Gráficos/Paquetes/Ayuda/Visualización (pestañas abajo a la derecha)
 
-![Diseño de RStudio](../fig/01-rstudio.png)
+![Diseño de RStudio]({{ site.baseurl }}/fig/01-rstudio.png)
 
 Una vez que abres archivos, como scripts de R, un panel de edición se abrirá también
 arriba a la izquierda.
 
-![Diseño de RStudio con un archivo .R abierto](../fig/01-rstudio-script.png)
+![Diseño de RStudio con un archivo .R abierto]({{ site.baseurl }}/fig/01-rstudio-script.png)
 
 
 ## Flujo de trabajo dentro de RStudio
@@ -211,8 +212,6 @@ objetivo.
 ~~~
 {: .output}
 
-This can get unwieldy when not needed, but  clarifies your intentions.
-Remember that others may later read your code.
 Esto puede volverse incómodo cuando no es necesario, pero clarifica tus intenciones.
 Recuerde que otros pueden leer tu código más adelante.
 

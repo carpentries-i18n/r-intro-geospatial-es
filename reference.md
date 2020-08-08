@@ -142,7 +142,7 @@ layout: reference
 {:auto_ids}
 argumentos
 :   Un valor dado a una función o programa mientras corre.
-    El termino es frecuentemente intercambiando  ( inconsistentemente) con  [parámetro](#parameter).
+    El termino es frecuentemente intercambiando  (inconsistentemente) con  [parámetro](#parameter).
 
 asignar
 : Darle un nombre a un valor al asociarlo a una variable.
@@ -162,7 +162,7 @@ en el que los valores en cada fila están separados por comas.
 
 delimitador
 : Un caracter o caracteres utilizados para separar valores individuales,
-como las comas entre columnas en un archivo [CSV] (#comma-separated-values).
+como las comas entre columnas en un archivo [CSV](#comma-separated-values).
 
 documentación
 : Texto en lenguaje humano escrito para explicar qué hace un software,
@@ -174,24 +174,24 @@ Ver también: [entero](#integer).
 
 bucle for
 : Un bucle que se ejecuta una vez para cada valor que hay en un conjunto, lista o rango.
-Ver también: [bucle while] (# while-loop).
+Ver también: [bucle while](# while-loop).
 
 indice
 : Un subíndice que especifica la ubicación de un solo valor en una colección,
 como un solo píxel en una imagen.
 
 entero
-: Un número entero, como -12343. Ver también: [número de coma flotante] (#floating-point-number).
+: Un número entero, como -12343. Ver también: [número de coma flotante](#floating-point-number).
 
 biblioteca
 : En R, los directorios donde los [paquetes]](#package) son almacenados.
 
 paquete
-: Una colección de funciones de R, datos y código compilado en un formato bien definido. Los paquetes se almacenan en una [biblioteca] (#library) y se cargan usando la función **library()**.
+: Una colección de funciones de R, datos y código compilado en un formato bien definido. Los paquetes se almacenan en una [biblioteca](#library) y se cargan usando la función **library()**.
 
 parametro
 : Una variable nombrada en la declaración de la función que se utiliza para contener un valor pasado durante la llamada.
-El término a menudo se usa indistintamente (e inconsistentemente) con [argumento] (#argument).
+El término a menudo se usa indistintamente (e inconsistentemente) con [argumento](#argument).
 
 sentencia de retorno
 :  Una declaración que hace que una función deje de ejecutarse y devuelva un valor a quien la invocó de inmediato.
@@ -205,7 +205,7 @@ Por ejemplo, la forma de una matriz de 5 × 3 es `(5,3)`.
 
 cadena
 : Abreviatura de "cadena de caracteres",
-una [secuencia] (#sequence) de cero o más caracteres.
+una [secuencia](#sequence) de cero o más caracteres.
 
 error de sintaxis
 :   Un error de programación que ocurre cuando las declaraciones están en un orden o contienen 

@@ -10,7 +10,7 @@
 Una introducción a R para los no programadores que usan los datos [Gapminder][gapminder].
 Por favor consulta <https://datacarpentry.org/r-intro-geospatial> para obtener una versión
  de este material,
-[la documentación de la plantilla de la lección] [lesson-example]
+[la documentación de la plantilla de la lección][lesson-example]
 para obtener instrucciones sobre formateo, construcción y envío de material,
 o ejecuta `make` en este directorio para obtener una lista de comandos útiles.
 
@@ -26,9 +26,8 @@ Nota que este taller se centra en los fundamentos del lenguaje de
 programación en R, y no en el análisis estadístico.
 
 La lección contiene material que se puede enseñar en aproximadamente 4 horas. La
-[página de notas del instructor]
-(https://datacarpentry.org/r-intro-geospatial/guide/index.html) tiene algunos
-planes de lecciones sugeridas adecuadas para un taller de uno o medio día.
+[página de notas del instructor](https://datacarpentry.org/r-intro-geospatial/guide/index.html)
+tiene algunos planes de lecciones sugeridas adecuadas para un taller de uno o medio día.
 
 #### Mantenedores:
 
