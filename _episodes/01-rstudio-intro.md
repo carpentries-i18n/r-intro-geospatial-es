@@ -2,7 +2,7 @@
 # Por favor, no edites este archivo directamente; se genera de forma automática.
 # En cambio, edita 01-rstudio-intro.md en _episodes_rmd/
 title: "Introducción a R y RStudio"
-exercises: 20
+teaching: 20
 exercises: 5
 questions:
 - "¿Cómo encontrar lo que buscas en RStudio?"
@@ -17,10 +17,10 @@ objetives:
 - "Llama funciones"
 - "Administra paquetes"
 keypoints:
-- "Usa RStudio para escribir y ejecutar programas R".
-- "R tiene los operadores aritméticos habituales".
-- "Usa `<-` para asignar valores a las variables".
-- "Usa `install.packages()` para instalar paquetes (bibliotecas)".
+- "Usa RStudio para escribir y ejecutar programas R."
+- "R tiene los operadores aritméticos habituales."
+- "Usa `<-` para asignar valores a las variables."
+- "Usa `install.packages()` para instalar paquetes (bibliotecas)."
 source: Rmd
 ---
 
