@@ -8,7 +8,7 @@ questions:
 - "¿Cómo encontrar lo que buscas en RStudio?"
 - "¿Cómo interactuar con R?"
 - "¿Cómo instalar paquetes?"
-objetives:
+objectives:
 - "Describe el propósito y el uso de cada panel en el IDE RStudio"
 - "Localiza botones y opciones en el IDE RStudio"
 - "Define una variable"
@@ -49,10 +49,10 @@ Por favor asegúrate de tener la última versión de R y de RStudio instalada en
 ## Introducción a RStudio
 
 A lo largo de esta lección, te enseñaremos algunos de los fundamentos
-del languaje R así como algunas de las mejores prácticas para organizar el código para
+del lenguaje R así como algunas de las mejores prácticas para organizar el código para
 proyectos científicos, lo que te hará la vida más fácil.
 
-Estaremos utilizando RStudio: un entorno de desarrollo integrado (IDE por su nombre en inglés) gratuito y de código abierto.
+Usaremos RStudio: un entorno de desarrollo integrado (IDE por su nombre en inglés) gratuito y de código abierto.
 RStudio provee un editor incorporado, funciona en todas las plataformas (incluyendo servidores)
 y provee muchas ventajas como el hecho de integrarse con control de versiones y manejo de proyectos.
 
@@ -83,7 +83,7 @@ de un archivo .R para correrlo más tarde
    *  Esto funciona bien cuando se hacen pequeñas pruebas y al inicio del trabajo.
    *  Rápidamente se transforma en un método laborioso
 2. Comenzar escribiendo en un archivo .R y usar los atajos de teclado de RStudio para el comando Ejecutar
-de modo de llevar la línea actual, las línes seleccionadas o líneas modificadas a la consola interactiva de R.
+para llevar la línea actual, las líneas seleccionadas o líneas modificadas a la consola interactiva de R.
    * Esta es una manera genial de comenzar; todo tu código es guardado para más tarde
    * Podrás correr el archivo que has creado dentro de RStudio
 o usando la función R's `source()`.
@@ -91,10 +91,10 @@ o usando la función R's `source()`.
 > ## Consejo: correr segmentos de tu código
 >
 > RStudio te ofrece una gran flexibilidad para correr código dentro de la ventana del editor.
-> Hay botones, menués de elección y atajos de teclado. Para correr la
+> Hay botones, menúes de elección y atajos de teclado. Para correr la
 > línea actual, puedes 
 >
-> 1. hacer click en el botón `Run` arriba del panel de edición, o
+> 1. hacer clic en el botón `Run` arriba del panel de edición, o
 > 2. seleccionar "Run Lines" del menú "Code", o 
 > 3. presionar <kbd>Ctrl</kbd>+<kbd>Enter</kbd> en Windows,
 > <kbd>Ctrl</kbd>+<kbd>Enter</kbd> en Linux, 
@@ -160,7 +160,7 @@ significa que R está esperando que completes el comando. Si quieres cancelar un
 comando puedes simplemente "<kbd>Esc</kbd>" y RStudio te devolverá el indicador "`>`".
 
 > ## Sugerencia: Cancelando comandos
-> Si estás utilizando R desde la línea de comando en lugar de desde RStudio,
+> Si estás utilizando R desde la línea de comando en lugar de RStudio,
 > necesitas usar  <kbd>Ctrl</kbd>+<kbd>C</kbd>en lugar de <kbd>Esc</kbd>
 > para cancelar el comando. ¡Esto también se aplica a los usuarios de Mac!
 >
@@ -217,7 +217,7 @@ Recuerde que otros pueden leer tu código más adelante.
 
 
 ~~~
-(3 + (5 * (2 ^ 2))) # dificil de leer
+(3 + (5 * (2 ^ 2))) # difícil de leer
 3 + 5 * 2 ^ 2       # claro, si recuerdas las reglas
 3 + 5 * (2 ^ 2)     # si no recuerdas algunas reglas, esto puede ayudar
 ~~~
@@ -246,11 +246,11 @@ Números muy pequeños o muy grandes obtienen una notación científica:
 Que es la versión abreviada de "multiplicado por `10^XX`". Entonces, `2e-4`
 es la abreviación de `2 * 10^(-4)`.
 
-You can write numbers in scientific notation too:
+También puedes escribir número en notación científica:
 
 
 ~~~
-5e3  # Note the lack of minus here
+5e3  # Note la falta de menos aquí
 ~~~
 {: .language-r}
 
@@ -261,9 +261,9 @@ You can write numbers in scientific notation too:
 ~~~
 {: .output}
 
-Don't worry about trying to remember every function in R. You can look them up
-on Google, or if you can remember the start of the function's name, use the tab
-completion in RStudio.
+No te preocupes por tratar de recordar cada función en R. Puedes buscarlas
+en Google, o si puedes recordar el comienzo del nombre de la función, usa completar con 
+Tab en RStudio.
 
 Esta es una ventaja que RStudio tiene sobre R por sí mismo, tiene capacidades de 
 autocompletado que te permiten buscar más fácilmente las funciones, sus argumentos y
@@ -359,26 +359,26 @@ También podemos realizar comparaciones en R:
 
 > ## Sugerencia: Comparando números
 >
-> A word of warning about comparing numbers: you should
-> never use `==` to compare two numbers unless they are
-> integers (a data type which can specifically represent
-> only whole numbers).
+> Una advertencia sobre la comparación de los números: nunca
+> deberías usar `==` para comparar dos números a menos que sean
+> **integers** (un tipo de datos que representa específicamente
+> solo números enteros).
 >
-> Computers may only represent decimal numbers with a
-> certain degree of precision, so two numbers which look
-> the same when printed out by R, may actually have
-> different underlying representations and therefore be
-> different by a small margin of error (called Machine
-> numeric tolerance).
+> Las computadoras sólo pueden representar números decimales con un
+> cierto grado de precisión, por lo que dos números que parecen
+>iguales al imprimirlos en R, pueden en realidad tener
+> diferentes representaciones subyacentes y, por lo tanto, pueden
+> diferir por un pequeño margen de error (llamado 
+> Machine numeric tolerance).
 >
-> Instead you should use the `all.equal` function.
+> En lugar de eso, deberías usar la función  `all.equal`.
 >
-> Further reading: [http://floating-point-gui.de/](http://floating-point-gui.de/)
+> Leer más en: [http://floating-point-gui.de/](http://floating-point-gui.de/)
 {: .callout}
 
-## Variables and assignment
+## Variables y asignación
 
-We can store values in variables using the assignment operator `<-`, like this:
+Podemos almacenar valores en variables usando el operador de asignación `<-`, así:
 
 
 ~~~
@@ -387,7 +387,7 @@ x <- 1/40
 {: .language-r}
 
 Observa que la asignación no imprime un valor. En cambio, lo almacenamos para más
-tarde en algo llamado ** variable **. `x` ahora contiene el valor ** **` 0.025`:
+tarde en algo llamado **variable**. `x` ahora contiene el **valor**` 0.025`:
 
 
 ~~~
@@ -402,10 +402,10 @@ x
 ~~~
 {: .output}
 
-Más precisamente, el valor almacenado es una * aproximación decimal * de esta fracción llamada [número de coma flotante](http://en.wikipedia.org/wiki/Floating_point).
+Más precisamente, el valor almacenado es una *aproximación decimal* de esta fracción llamada [número de coma flotante](http://en.wikipedia.org/wiki/Floating_point).
 
-Look for the `Environment` tab in one of the panes of RStudio, and you will see that `x` and its value
-have appeared. Our variable `x` can be used in place of a number in any calculation that expects a number:
+Busca la pestaña `Environment` en uno de los paneles de RStudio, y verás que ` x` y su valor
+han aparecido. Nuestra variable `x` puede usarse en lugar de un número en cualquier cálculo que espere un número:
 
 
 ~~~
@@ -442,63 +442,63 @@ y <- x * 2
 El lado derecho de la asignación puede ser cualquier expresión válida de R.
 El lado derecho se *evalúa por completo* antes de que ocurra la asignación.
 
-> ## Challenge 1
+> ## Desafío 1
 >
-> What will be the value of each  variable  after each
-> statement in the following program?
+> ¿Cuál será el valor de cada variable después de cada
+> declaración en el siguiente programa?
 >
 > 
 > ~~~
-> mass <- 47.5
-> age <- 122
-> mass <- mass * 2.3
-> age <- age - 20
+> mass (masa) <- 47.5
+> age (edad) <- 122
+> mass (masa) <- mass * 2.3
+> age (edad) <- age - 20
 > ~~~
 > {: .language-r}
 >
-> > ## Solution to challenge 1
+> > ## Solución  al desafío 1
 > >
 > > 
 > > ~~~
-> > mass <- 47.5
+> > mass (masa) <- 47.5
 > > ~~~
 > > {: .language-r}
-> > This will give a value of 47.5 for the variable mass
+> > Esto dará un valor de 47.5 para la variable mass (masa)
 > >
 > > 
 > > ~~~
-> > age <- 122
+> > age (edad) <- 122
 > > ~~~
 > > {: .language-r}
-> > This will give a value of 122 for the variable age
+> > Esto dará un valor de 122 para la variable age (edad)
 > >
 > > 
 > > ~~~
-> > mass <- mass * 2.3
+> > mass (masa) <- mass * 2.3
 > > ~~~
 > > {: .language-r}
-> > This will multiply the existing value of 47.5 by 2.3 to give a new value of
-> > 109.25 to the variable mass.
+> > Esto multiplicará el valor existente de 47.5 by 2.3 para dar un nuevo valor de
+> > 109.25 para la variable mass (masa).
 > >
 > > 
 > > ~~~
-> > age <- age - 20
+> > age (edad) <- age - 20
 > > ~~~
 > > {: .language-r}
-> > This will subtract 20 from the existing value of 122 to give a new value
-> > of 102 to the variable age.
+> > Esto restará 20 del valor existente de 122 para dar un nuevo valor
+> > de 102 a la variable age (edad).
 > {: .solution}
 {: .challenge}
 
 
-> ## Challenge 2
+> ## Desafío 2
 >
-> Run the code from the previous challenge, and write a command to
-> compare mass to age. Is mass larger than age?
+> Ejecuta el código del desafío anterior y escribe un comando para
+> comparar la masa con la edad. ¿La masa es mayor que la edad?
 >
-> > ## Solution to challenge 2
+> > ## Solución al desafío 2
 > >
-> > One way of answering this question in R is to use the `>` to set up the following:
+> > Una forma de responder a esta pregunta en R es usar el `>` para configurar lo siguiente:
 > > 
 > > ~~~
 > > mass > age
@@ -511,22 +511,22 @@ El lado derecho se *evalúa por completo* antes de que ocurra la asignación.
 > > [1] TRUE
 > > ~~~
 > > {: .output}
-> > This should yield a boolean value of TRUE since 109.25 is greater than 102.
+> > Esto debería producir un valor booleano de VERDADERO (TRUE) ya que  109.25 es más grande que 102.
 > {: .solution}
 {: .challenge}
 
 
-Variable names can contain letters, numbers, underscores and periods. They
-cannot start with a number nor contain spaces at all. Different people use
-different conventions for long variable names, these include
+Los nombres de las variables pueden contener letras, números, guiones bajos y puntos. Ellos
+no puede comenzar con un número ni contener espacios en absoluto. Diferentes personas usan
+diferentes convenciones para nombres de variables largos, estas incluyen
 
-  * periods.between.words
-  * underscores\_between_words
-  * camelCaseToSeparateWords
+  * puntos.entre.palabras
+  * guiones_ bajos\ _entre_palabras
+  * CamelCaseParaSepararPalabras
 
-What you use is up to you, but **be consistent**.
+Lo que uses depende de ti, pero **debes ser consistente**.
 
-It is also possible to use the `=` operator for assignment:
+También es posible utilizar el operador `=` para la asignación:
 
 
 ~~~
@@ -534,14 +534,14 @@ x = 1/40
 ~~~
 {: .language-r}
 
-But this is much less common among R users.  The most important thing is to
-**be consistent** with the operator you use. There are occasionally places
-where it is less confusing to use `<-` than `=`, and it is the most common
-symbol used in the community. So the recommendation is to use `<-`.
+Pero esto es mucho menos común entre los usuarios de R. Lo mas importante es
+**Ser consistennte** con el operador que uses. Ocasionalmente hay lugares
+donde es menos confuso usar `<-` que` = `, y este es el símbolo más común
+en la comunidad. Entonces la recomendación es usar `<-`. 
 
-> ## Challenge 3
+> ## Desafío 3
 >
-> Which of the following are valid R variable names?
+> ¿Cuáles de los siguientes son nombres de variables válidos en R?
 > 
 > ~~~
 > min_height
@@ -555,9 +555,9 @@ symbol used in the community. So the recommendation is to use `<-`.
 > ~~~
 > {: .language-r}
 >
-> > ## Solution to challenge 3
+> > ## Solución al desafío 3
 > >
-> > The following can be used as R variables:
+> > Los siguientes nombres pueden estar usados para variables en R:
 > > 
 > > ~~~
 > > min_height
@@ -567,17 +567,17 @@ symbol used in the community. So the recommendation is to use `<-`.
 > > ~~~
 > > {: .language-r}
 > >
-> > The following creates a hidden variable:
+> > Lo siguiente crea una variable oculta:
 > > 
 > > ~~~
 > > .mass
 > > ~~~
 > > {: .language-r}
 > >
-> > We won't be discussing hidden variables in this lesson. We recommend not using a period at the
-> > beginning of variable names unless you intend your variables to be hidden.
+> > No discutiremos las variables ocultas en esta lección. Recomendamos no utilizar un punto en el
+> > comienzo de los nombres de las variables a menos que desee ocultar sus variables.
 > >
-> > The following will not be able to be used to create a variable
+> > Los siguientes nombres no se podrán utilizar para crear una variable
 > > 
 > > ~~~
 > > _age

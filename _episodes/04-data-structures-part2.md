@@ -17,24 +17,24 @@ keypoints:
 - "Usar `rbind()` para agregar una nueva fila a un dataframe."
 - "Eliminar filas de un dataframe."
 - "Usar `na.omit()` para eliminar filas de un dataframe con valores `NA`. "
-- "Usar `levels()` y `as.character()` para explorar y manipular **factores**."
+- "Usar `levels()` y `as.character()` para explorar y manipular `factores`."
 - "Usar `str()`, `nrow()`, `ncol()`, `dim()`, `colnames()`, `rownames()`, `head()` y `typeof()` para comprender la estructura de un dataframe."
 - "Leer en un archivo csv usando `read.csv()`."
-- "Comprender qué representa `length()` de un dataframe."
-fuente: Rmd
+- "Comprender quE representa`length()` en un dataframe."
+source: Rmd
 ---
 
 
 
 Hasta aquí, lo has visto todo: en la última lección, hemos recorrido todos 
-los tipos de datos y estructuras básicas en R.  Todo lo que harás será una
-manipulación de esas herramientas. Pero la mayor parte del tiempo, 
-la estrella del show es el data.frame—la tabla que hemos creado cargando la información desde un archivo csv. En esta lección aprenderemos algunas cosas más sobre el trabajo con data.frames. 
+los tipos de datos y estructuras básicas en R.  Todo lo que harás será 
+utilizar esas herramientas. Pero la mayor parte del tiempo, 
+la estrella del show es el data.frame—la tabla que hemos creado cargando la información desde un archivo csv. En esta lección aprenderemos algunas cosas más sobre el trabajo con `data.frames`. 
 
 ## Un ejemplo práctico
 
 Ya hemos aprendido que las columnas de un dataframe son vectores, que permiten
-que nuestros datos sean consistentes en tipo en todas las columnas.  
+que nuestros datos sean consistentes con su tipo de datos en cada columna.  
 Hasta ahora, haz visto los fundamentos de la manipulación de dataframes con nuestros datos nórdicos; 
 ahora usaremos esas habilidades para procesar un conjunto de datos más extenso. Leamos en R el conjunto de datos de gapminder que hemos descargado anteriormente:
 
@@ -43,7 +43,7 @@ ahora usaremos esas habilidades para procesar un conjunto de datos más extenso.
 > ## Consejos Varios
 >
 > * Otro tipo de archivos que puedes encontrar son los archivos de valores separados
- por tabulaciones (.tsv). Para especificar una pestaña como separador, usa `"\\t"` o `read.delim()`.
+ por tabulaciones (.tsv). Para especificar una pestaña como separador, usa `"\\t"` o `read.delim`.
 > 
 > * Los archivos también pueden ser descargados directamente de Internet a una carpeta local 
 de tu elección en tu computadora usando la función `download.file`. 
@@ -60,7 +60,7 @@ desde el lugar dónde se lo guardó , por ejemplo,
 >
 > * Alternativamente, también puedes leer archivos de Internet 
 directamente en R reemplazando en `read.csv` la ruta del archivo por su dirección web. 
-Hay que tener en cuenta que al hacer esto no se guardará primero una copia local del archivo csv en tu ordenador.  Por ejemplo,
+Hay que tener en cuenta que al hacer esto no se guardará primero una copia local del archivo csv en tu computadora. Por ejemplo,
 > 
 > 
 > ~~~
@@ -148,7 +148,7 @@ length(gapminder)
 {: .language-r}
 
 Una buena suposición diría que la longitud de un dataframe sería el
-número de filas que tiene (1704), pero no es éste el caso; nos da el número de columnas.
+número de filas que tiene (1704), pero no, en éste el caso nos da el número de columnas.
 
 
 ~~~
@@ -207,8 +207,7 @@ dim(gapminder)
 ~~~
 {: .output}
 
-También es probable que queramos saber cuáles son los nombres de todas las columnas, para que más tarde
-podamos consultar usándolos:
+También es probable que queramos saber cuáles son los nombres de todas las columnas, para que más tarde podamos consultar por nombre:
 
 
 ~~~
@@ -225,12 +224,11 @@ colnames(gapminder)
 
 En esta etapa, es importante preguntarnos si la estructura R que está informando 
 coincide con nuestra intuición o expectativas; ¿los tipos de datos básicos informados para cada columna 
-tienen sentido? Si no es así, tenemos que resolver  cualquier problema ahora, antes de que se convierta 
+tienen sentido? Si no es así, tenemos que resolver cualquier problema ahora, antes de que se convierta 
 en una mala sorpresa, usando lo que hemos aprendido sobre cómo R 
 interpreta los datos, y la importancia de la *consistencia estricta* en la forma en que registramos nuestros datos.
 
-Una vez que estamos contentas de que los tipos y estructuras de datos se ven razonables, es hora de
-empezar a explorar apropiadamente nuestros datos. Mira las primeras líneas:
+Una vez que estamos contentas de que los tipos y estructuras de datos se ven razonables, es hora de empezar a explorar apropiadamente nuestros datos. Mira las primeras líneas:
 
 
 ~~~
@@ -251,7 +249,7 @@ head(gapminder)
 ~~~
 {: .output}
 
-> ## Challenge 1
+> ## Desafío 1
 >
 > Es una buena práctica comprobar también las últimas líneas de los datos y algunas 
 > del medio. ¿Cómo lo harías?
@@ -276,14 +274,14 @@ head(gapminder)
 > > Hay varias maneras de lograr esto.
 > >
 > > La solución que se muestra aquí presenta una forma que utiliza funciones anidadas, es decir, una función que
-> > pasa otra función como argumento. Esto podría parecer  un concepto nuevo
+> > pasa su resultado a otra función como argumento. Esto podría parecer  un concepto nuevo
 > > pero de hecho ya lo estás usando.
 > >
 > > Recuerda que `my_dataframe[rows, cols]` va a imprimir en pantalla tu dataframe
 > con el número de filas y columnas que le pediste (aunque podrías 
 > > haber pedido un rango de columnas, por ejemplo). ¿Cómo obtendrías la
 > > última fila si no sabes cuántas filas tiene tu dataframe? R tiene una
-> > función para esto. ¿Qué hay de obtener una muestra (pseudo-aleatoria)? R también tiene 
+> > función para esto. ¿Cómo intentarías obtener una muestra (pseudo-aleatoria)? R también tiene una
 > > función para esto.
 > > 
 > > 
@@ -294,7 +292,7 @@ head(gapminder)
 > {: .solution}
 {: .challenge}
 
-> ## Challenge 2
+> ## Desafío 2
 >
 > Lee la salida de `str(gapminder)` de nuevo; esta vez, usa lo que has aprendido
 > sobre factores y vectores, así como la salida de funciones como `colnames`
@@ -302,12 +300,12 @@ head(gapminder)
 > significa. ¡Si hay alguna parte que no puedes interpretar, discútela con tus
 > vecinos!
 >
-> > ## Solución al Reto 2
+> > ## Solución al Desafío 2
 > >
 > > El objeto `gapminder` es un dataframe con columnas
 > >
 > > - `country` y `continent` como **factores**.
-> > - `year` es vector de enteros.
+> > - `year` es un vector de enteros.
 > > - `pop`, `lifeExp`, y `gdpPercap` son vectores numéricos.
 > {: .solution}
 {: .challenge}
@@ -461,7 +459,7 @@ Ahora, ¿qué tal agregar filas? Las filas de un dataframe son listas:
 
 
 ~~~
-new_row <- list('Norway', 2016, 5000000, 'Nordic', 80.3, 49400.0, FALSE)
+new_row <- list("Norway", 2016, 5000000, "Nordic", 80.3, 49400.0, FALSE)
 gapminder_norway <- rbind(gapminder, new_row)
 tail(gapminder_norway)
 ~~~
@@ -485,19 +483,19 @@ Para entender por qué R  da una advertencia cuando intentamos añadir esta fila
 ## Factores
 
 Otra cosa que hay que tener en cuenta: en un `factor`, cada valor diferente
-representa lo que se llama un "nivel" o "categoría" ( `level`). En nuestro caso, el `factor` "continente" tiene 5
-niveles: "África", "América", "Asia", "Europa" y "Oceanía". R sólo aceptará
+representa lo que se llama un "nivel" o "categoría" (`level`). En nuestro caso, el `factor` "continente" tiene 5
+niveles: "Africa", "Americas", "Asia", "Europa" y "Oceania". R sólo aceptará
 valores que coincidan con alguno de los niveles. Si añades un nuevo valor, se convertirá en
 `NA`.
 
-La advertencia nos dice que agregamos "nordic" sin éxito a nuestro
-factor *continent*, pero 2016 (un numeric), 5000000 (un numeric), 80.3 (un numeric),
-49400.0 (un numeric) y `FALSE` (un logic) se agregaron con éxito a
-*país*, *año*, *pop*, *lifeExp*, *gdpPercap* y *below_average*
+La advertencia (warning) nos dice que agregamos "nordic" sin éxito a nuestro
+factor *continent*, pero 2016 (un dato de tipo numeric), 5000000 (otro numeric), 80.3 (otro numeric),
+49400.0 (otro numeric) y `FALSE` (un tipo de dato logic) se agregaron con éxito a
+*country*, *year*, *pop*, *lifeExp*, *gdpPercap* y *below_average*
 respectivamente, ya que esas variables no son **factores**. 'Norway' también fue
 agregado con éxito ya que corresponde a un nivel existente. Para agregar con
-éxita una fila gapminder con un *continente* "nordic", agregue "nordic" como *nivel* de
-el factor:
+éxito una nueva fila a gapminder con un *continent* "Nordic", necesitas agregar "Nordic" como *nivel* de
+factor en continent:
 
 
 ~~~
@@ -517,7 +515,7 @@ NULL
 ~~~
 levels(gapminder$continent) <- c(levels(gapminder$continent), "Nordic")
 gapminder_norway  <- rbind(gapminder,
-                           list('Norway', 2016, 5000000, 'Nordic', 80.3,49400.0, FALSE))
+                           list("Norway", 2016, 5000000, "Nordic", 80.3,49400.0, FALSE))
 ~~~
 {: .language-r}
 
@@ -549,9 +547,9 @@ tail(gapminder_norway)
 ~~~
 {: .output}
 
-Alternativamente, podemos cambiar un factor en un vector de caracteres; perdemos las prácticas
-categorías del factor, pero posteriormente podemos agregar cualquier palabra que queramos a la
-columna sin preocuparse por los niveles del factor:
+Alternativamente, podemos cambiar un factor a un vector de caracteres; perderemos
+categorías del factor que son tan prácticas, pero posteriormente podemos agregar cualquier palabra que queramos a la
+columna sin preocuparnos por los niveles del factor:
 
 
 ~~~
@@ -599,7 +597,7 @@ str(gapminder)
 ## Agregando a un dataframe
 
 Cuando se agregan datos a un dataframe, la clave es recordar que las *columnas son
-vectores y filas son listas.* También podemos pegar dos dataframes juntos con
+vectores y filas son listas.* También podemos pegar dos dataframes con
 `rbind`:
 
 
@@ -618,7 +616,7 @@ tail(gapminder, n=3)
 3408 Zimbabwe 2007 12311143    Africa  43.487  469.7093          TRUE
 ~~~
 {: .output}
-Pero ahora los nombres de las filas son innecesariamente complicados (no números consecutivos).
+Pero ahora los nombres de las filas son innecesariamente complicadas (no son números consecutivos).
 Podemos eliminar los nombres de las filas, y R automáticamente los renombrará secuencialmente:
 
 
@@ -641,7 +639,7 @@ head(gapminder)
 ~~~
 {: .output}
 
-> ## Challenge 3
+> ## Desafío 3
 >
 > Puedes crear un nuevo dataframe en R con la siguiente sintaxis:
 > 
@@ -653,22 +651,22 @@ head(gapminder)
 > ~~~
 > {: .language-r}
 >
-> Crea un dataframe que tenga la información tuya:
+> Crea un dataframe que tenga ltu información:
 >
 > - nombre
 > - apellido
 > - número de la suerte
 >
-> Luego usa `rbind` para agregar una entrada para las personas que están detrás tuyo. Por último,
+> Luego usa `rbind` para agregar una entrada para las personas que están cerca tuyo. Por último,
 > usa `cbind` para agregar una columna con la respuesta de cada persona a la pregunta, "¿Es
 > hora de ir por un café?"
 >
-> > ## Solución al Reto 3
+> > ## Solución al Desafío 3
 > >
 > > 
 > > ~~~
 > > df <- data.frame(first = c("Grace"),
-> >                  last = c("Hopper"),
+> >                  last = c("Rodriguez"),
 > >                  lucky_number = c(0),
 > >                  stringsAsFactors = FALSE)
 > > df <- rbind(df, list("Marie", "Curie", 238) )

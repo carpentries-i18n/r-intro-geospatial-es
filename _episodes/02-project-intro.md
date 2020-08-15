@@ -142,7 +142,7 @@ en un nombre de archivo. Para obtener más consejos sobre cómo nombrar archivos
 
 Ahora que tenemos una buena estructura para el proyecto, guardaremos nuestros archivos de datos en el directorio `datos/`.
 
-> ## Challenge 1
+> ## Desafío 1
 > 1 \. Descarga cada uno de los archivos de datos enumerados a continuación (<kbd>Ctrl</kbd>+<kbd>S</kbd>, haz clic con el botón derecho del ratón -> "Guardar como" o Archivo -> "Guardar página como")
 > 
 > - [datos de los países nórdicos](https://raw.githubusercontent.com/datacarpentry/r-intro-geospatial/master/_episodes_rmd/data/nordic-data.csv)
@@ -159,7 +159,7 @@ Ahora que tenemos una buena estructura para el proyecto, guardaremos nuestros ar
 > Cargaremos e inspeccionaremos estos datos más tarde.
 {: .challenge}
 
-> ## Challenge 2
+> ## Desafío 2
 > También queremos mover los datos que descargamos de la [página de datos](http://datacarpentry.org/geospatial-workshop/data/) a un subdirectorio
 > dentro de `r-geospatial`. Si aún no has descargado los datos, puedes hacerlo haciendo clic en
 > [este enlace de descargar](https://ndownloader.figshare.com/articles/2009586/versions/10). 

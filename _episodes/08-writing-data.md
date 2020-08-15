@@ -46,11 +46,11 @@ dev.off()
 
 Abre este documento y échale un vistazo.
 
-> ## Challenge 1
+> ## Desafío 1
 >
-> Re escribe tu comando 'pdf' para imprimir una segunda
+> Reescribe tu comando 'pdf' para imprimir una segunda
 > página en el pdf, mostrando el gráfico side-by-side bar
-> de gdp per capita en países de las Américas 
+> de pib per cápita en países de las Américas 
 > en los años 1952 y 2007  que creaste en el
 > episodio previo. 
 > 
@@ -123,7 +123,7 @@ write.csv(
 ~~~
 {: .language-r}
 
-> ## Challenge 2
+> ## Desafío 2
 > Filtra los datos de gapminder
 > para incluir solo los datos que se recolectaron desde 1990. Escribe el nuevo subconjunto en un 
 > archivo en el directorio **`clean-data/`**.

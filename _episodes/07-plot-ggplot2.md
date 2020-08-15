@@ -5,9 +5,9 @@ title: Introducción a la Visualización
 teaching: 20
 exercises: 15
 questions:
-- "¿Cuáles son los aspectos básico para crear gráficos en R?"
+- "¿Cuáles son los aspectos básicos para crear gráficos en R?"
 objectives:
-- "Ser capaz de usar ggplot2 para generar histogramas y gráficos de barras."
+- "Ser capaz de usar `ggplot2` para generar histogramas y gráficos de barras."
 - "Aplicar capas geométricas y estéticas a un gráfico de ggplot."
 - "Manipular la estética de un gráfico usando diferentes colores y parámetros de posición."
 keypoints:
@@ -18,7 +18,7 @@ source: Rmd
 
 
 
-Graficar nuestros datos es una de las mejores formas de explorarlos de manera rápida y
+Graficar nuestros datos es una de las mejores formas de explorarlos de manera rápida y ver
 relaciones entre diferentes variables. Hay tres sistemas principales para gráficos en R, el
 [sistema base de gráficos](http://www.statmethods.net/graphs/), el
 paquete [lattice](http://www.statmethods.net/advgraphs/trellis.html), y el
@@ -31,9 +31,9 @@ a trabajar con datos geoespaciales en la lección [R para datos Ráster y
 Vectoriales](https://datacarpentry.org/r-raster-vector-geospatial/).
 
 ggplot2 está basado en la gramática de gráficos, la idea de que cualquier gráfico se puede
-expresar a partir del mismo conjunto de componentes: un conjunto de **datos**, un **sistema coordenado**
+expresar a partir del mismo conjunto de componentes: un conjunto de **datos**, un **sistema de coordenadas**
 , y un conjunto de **geoms**--la representación visual de los puntos de datos. La
-clave para entender ggplot2 es pensar una figura como capas. Esta idea puede
+clave para entender ggplot2 es pensar una figura como un conjunto de capas. Esta idea puede
 ser familiar si has usado programas para edición de imágenes como Photoshop,
 Illustrator, o Inkscape. En este episodio nos concentraremos en dos geoms
 - histogramas y gráficos de barras. En la lección [R para Datos Ráster y Vectoriales](https://datacarpentry.org/r-raster-vector-geospatial/) usaremos otros tipos de geoms
@@ -43,8 +43,7 @@ Empecemos con un ejemplo representando la distribución de la esperanza de vida 
 
 Pasaremos dos argumentos a `ggplot`. Primero, le diremos a
 `ggplot` qué datos
-queremos mostrar en nuestra figura, en este ejemplo utilizamos los datos de gapminder que leímos
-más temprano. Para el segundo argumento pasamos la función `aes ()`, la cual
+queremos mostrar en nuestra figura, en este ejemplo utilizamos los datos de gapminder que leímos antes. Para el segundo argumento pasamos la función `aes ()`, la cual
 le dice a `ggplot` cómo se mapean las propiedades estéticas con los datos de 
 la figura. Aquí le diremos a `ggplot` que 
 queremos graficar la columna "lifeExp" de la base de datos gapminder en el eje de las x. No necesitamos especificar un eje y 
@@ -60,7 +59,7 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 
 <img src="{{ site.baseurl }}/fig/rmd-07-lifeExp-vs-gdpPercap-scatter-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter" alt="plot of chunk lifeExp-vs-gdpPercap-scatter" style="display: block; margin: auto;" width="612"/>
 
-Por si misma, la llama a `ggplot` no es suficiente para graficar una figura:
+Por si misma, la llamada a `ggplot` no es suficiente para graficar una figura:
 
 
 ~~~
@@ -72,7 +71,7 @@ ggplot(data = gapminder, aes(x = lifeExp))
 
 Necesitamos decirle a  `ggplot` cómo queremos representar visualmente los datos, lo cual 
 hacemos al agregar capas de geom. En nuestro ejemplo, utilizamos `geom_histogram()`, la cual
-le dice a `ggplot` que queremos representar visualmente la distribución de una varialbe (en nuestro caso "lifeExp"):
+le dice a `ggplot` que queremos representar visualmente la distribución de una variable (en nuestro caso "lifeExp"):
 
 
 ~~~
@@ -90,10 +89,10 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 
 <img src="{{ site.baseurl }}/fig/rmd-07-lifeExp-vs-gdpPercap-scatter2-1.png" title="plot of chunk lifeExp-vs-gdpPercap-scatter2" alt="plot of chunk lifeExp-vs-gdpPercap-scatter2" style="display: block; margin: auto;" width="612"/>
 
-> ## Challenge 1
+> ## Desafío 1
 >
 > Modifica el ejemplo para que la figura muestre la
-> distribución del gdp per capita, en lugar de la expectativa 
+> distribución del pib per capita, en lugar de la expectativa 
 > de vida:
 >
 > > ## Solución al desafío 1
@@ -118,7 +117,7 @@ ggplot(data = gapminder, aes(x = lifeExp)) +
 
 Los histogramas son una herramienta útil para visualizar
 la distribución de una variable categórica. ¿Qué pasa si 
-queremos comparar el pib per cápita de los países en 
+queremos comparar el PIB per cápita de los países en 
 nuestro conjunto de datos? Podemos usar un gráfico de barras (o columnas).
 Para simplificar nuestro gráfico, miremos datos del año más reciente y sólo de
 países en América.
@@ -134,11 +133,13 @@ Trazaremos los países en el eje x (enumerados en orden alfabético
 por defecto) y pib per cápita en el eje y.
 
 
+~~~
 ggplot(data = gapminder_small, aes(x = country, y = gdpPercap)) + 
-geom_col()
+  geom_col()
+~~~
 {: .language-r}
 
-<img src="{{ site.baseurl }}/fig/rmd-07-hist-subset-gapminder-1.png" title="plot of chunk hist-subset-gapminder" alt="plot of chunk hist-subset-gapminder" style="display: block; margin: auto;" width="612"/>
+<img src="../fig/rmd-07-hist-subset-gapminder-1.png" title="plot of chunk hist-subset-gapminder" alt="plot of chunk hist-subset-gapminder" width="612" style="display: block; margin: auto;" />
 
 Con muchas barras representadas, es imposible leer todas las etiquetas del eje x. Una solución rápida es añadir la función `coord_flip()` al final del código de nuestro gráfico
 
@@ -150,13 +151,13 @@ ggplot(data = gapminder_small, aes(x = country, y = gdpPercap)) +
 ~~~
 {: .language-r}
 
-<img src="{{ site.baseurl }}/fig/rmd-07-hist-subset-gapminder-flipped-1.png" title="plot of chunk hist-subset-gapminder-flipped" alt="plot of chunk hist-subset-gapminder-flipped" style="display: block; margin: auto;" width="612"/>
+<img src="../fig/rmd-07-hist-subset-gapminder-flipped-1.png" title="plot of chunk hist-subset-gapminder-flipped" alt="plot of chunk hist-subset-gapminder-flipped" width="612" style="display: block; margin: auto;" />
 
 Hay formas más sofisticadas de modificar el nombre de
 los ejes. Aprenderemos algunos de esos métodos
 más adelante en este taller.
 
-> ## Challenge 2
+> ## Desafío 2
 >
 > En los ejemplos anteriores y en el desafío hemos utilizado la función `aes` para decirle
 > a las funciones `geom_histogram()` y  `geom_col()` qué columnas 
@@ -216,7 +217,7 @@ mayor profundidad, incluyendo:
 - crear y personalizar una leyenda de un gráfico
 - ¡y mucho más!
 
-Los ejemplos en los que hemos trabajado The examples we've worked a través de este episodio deberían darte las bases 
+Los ejemplos en los que hemos trabajado en este episodio deberían darte las bases 
 para trabajar con tipos de gráficos más complejos y personalizaciones 
 con las que vamos a trabajar en esa lección.
 
